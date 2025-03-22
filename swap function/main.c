@@ -10,8 +10,8 @@ int main()
     printf("Before swapping: \n");
     printf("**num1** = %d \n", num1);
     printf("**num2** = %d \n", num2);
-    printf("After swapping: \n");
     swap(&num1, &num2);
+    printf("After swapping: \n");
     printf("**num1** = %d \n", num1);
     printf("**num2** = %d \n", num2);
 
