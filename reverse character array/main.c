@@ -19,6 +19,16 @@ void reverseArrayIterative(char *arr, int size)
     for(int i=0; i<size/2; i++)
     {
         swapCharacters(&arr[i], &arr[size-1-i]);
+//        swapCharacters(arr+i, arr+size-1-i);      // pointer arithmetic
+    }
+}
+void reverseArrayRecursive(char *arr, int size)
+{
+    if(size > 1)
+    {
+        swapCharacters(&arr[0], &arr[size-1]);
+//        swapCharacters(arr, arr+size-1);          // pointer arithmetic
+        reverseArrayRecursive(arr+1, size-2);
     }
 }
 
@@ -29,6 +39,7 @@ int main()
     printf("Before reversing: \n");
     printArray(name, SIZE);
     reverseArrayIterative(name, SIZE);
+    reverseArrayRecursive(name, SIZE);
     printf("After reversing: \n");
     printArray(name, SIZE);
 
