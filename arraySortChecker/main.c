@@ -15,6 +15,22 @@ int howArrayIsSorted(int *arr, int *isReallySorted)
 
     return 1;
 }
+int howArrayIsSortedRecursive(int *arr, int size, int *isReallySorted)
+{
+    *isReallySorted = 1;
+
+    if(size !=1)
+    {
+        if(arr[size-1] <= arr[size-2])
+            *isReallySorted = 0;
+        if(arr[size-1] < arr[size-2])
+            return 0;
+        else
+            return howArrayIsSortedRecursive(arr, size-1, &isReallySorted);
+    }
+    else
+        return 1;
+}
 
 int main()
 {
@@ -23,6 +39,7 @@ int main()
     int isReallySortFlag;
 
     returnValue = howArrayIsSorted(myArray, &isReallySortFlag);
+    returnValue = howArrayIsSortedRecursive(myArray, 7, &isReallySortedFlag);
 
     if(returnValue == 1 && isReallySortFlag == 1)
         printf("The array is really sorted. \n");
