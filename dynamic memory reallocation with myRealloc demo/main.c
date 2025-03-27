@@ -73,7 +73,7 @@ int main()
 
     if(n > 0)
     {
-        temp = (void*)myRealloc(grades, totalGrades, sizeof(int));
+        temp = (int*)myRealloc(grades, totalGrades, sizeof(int));
 
         if(temp == NULL)
         {
@@ -87,7 +87,7 @@ int main()
     }
     else if(n < 0)
     {
-        temp = (void*)myRealloc(grades, totalGrades, sizeof(int));
+        temp = (int*)myRealloc(grades, totalGrades, sizeof(int));
 
         if(temp == NULL)
         {
