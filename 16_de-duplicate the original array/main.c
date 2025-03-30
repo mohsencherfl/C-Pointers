@@ -100,15 +100,6 @@ int *createNoDuplexArray(int *arr, int *arrSize)
     return newArr;
 }
 
-// Function to take user input for the array
-void inputArray(int *arr, int size)
-{
-    for (int i = 0; i < size; i++) {
-        printf("Enter value #%d: ", i + 1);
-        scanf("%d", &arr[i]);
-    }
-}
-
 // Function to print the array
 void printArray(int *arr, int size)
 {
