@@ -13,6 +13,13 @@ int main() {
         scanf("%d", &numOfColumns[i]);
 
         arr[i] = calloc(numOfColumns[i], sizeof(int));      // Allocate the exact amount of memory for each row based on the number of its columns.
+
+        if(!arr[i])
+        {
+            for(int j=0; j<i; j++)
+                free(arr[i]);
+            return 1;
+        }
     }
 
     for(int i=0; i<5; i++)      // Fill the matrix with values.
@@ -33,6 +40,8 @@ int main() {
         printf("\n");
     }
 
+    for(int i=0; i<5; i++)      // Free allocated memory.
+        free(arr[i]);
+
     return 0;
 }
-
