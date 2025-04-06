@@ -26,7 +26,7 @@ void printValue(int **a, int row)
     }
 }
 
-int **lowerTriangularMatrix(int **a, int *row)
+int **upperTriangularMatrix(int **a, int *row)
 {
     printf("Enter the row size: ");
     scanf("%d", row);
@@ -58,7 +58,7 @@ int main() {
 
     int **matrix;
     int row;
-    matrix = lowerTriangularMatrix(matrix, &row);
+    matrix = upperTriangularMatrix(matrix, &row);
     if(!matrix)
         return 1;
 
