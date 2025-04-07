@@ -2,14 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-int myStrlen(char *str)
-{
-    int length = 0;
-    while(str[length] != '\0')
-        length++;
-    return length;
-}
-
 void myStrcpy(char *str1, char *str2, int size1, int size2)
 {
     if(size1 < size2)
